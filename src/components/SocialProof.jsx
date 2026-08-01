@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 import { Star, Quote, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { assetUrl } from '@/lib/assets';
 
 const SocialProof = () => {
   const testimonials = [
@@ -10,7 +11,8 @@ const SocialProof = () => {
       id: 1,
       name: 'Regie D. Patagoc, PhD',
       role: 'Director, Regional Coffee Innovation Center',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+      image: assetUrl('Regie.jpg'),
+      imagePosition: '50% 78%',
       content: 'Lloyd contributed thoughtfully designed digital systems that support the Regional Coffee Innovation Center\'s programs, operations, and public services.',
       rating: 5,
     },
@@ -18,7 +20,8 @@ const SocialProof = () => {
       id: 2,
       name: 'Jan Christian D. Enero, MBA',
       role: 'Regional Coffee Innovation Center Lab In-Charge',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
+      image: assetUrl('Jan.jpg'),
+      imagePosition: '50% 48%',
       content: 'His technical work helped translate laboratory and operational requirements into practical, reliable, and accessible digital tools.',
       rating: 5,
     },
@@ -26,7 +29,8 @@ const SocialProof = () => {
       id: 3,
       name: 'Dale Jahziel G. Depacaquibo',
       role: 'University Barista',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80',
+      image: assetUrl('Dale.png'),
+      imagePosition: '50% 28%',
       content: 'He approached the coffee education and point-of-sale workflows with care, responsiveness, and a strong focus on the user experience.',
       rating: 5,
     },
@@ -105,7 +109,8 @@ const SocialProof = () => {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-accent-purple/30"
+                  style={{ objectPosition: testimonial.imagePosition }}
+                  className="w-14 h-14 rounded-full object-cover border-2 border-accent-purple/30"
                 />
                 <div>
                   <p className="font-semibold text-white">{testimonial.name}</p>

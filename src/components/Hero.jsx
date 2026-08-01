@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { ArrowRight, Mail, Download, Github, Linkedin, Coffee, Code2, Globe } from 'lucide-react';
+import { ArrowRight, Mail, Download, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { assetUrl } from '@/lib/assets';
@@ -190,16 +190,22 @@ const Hero = () => {
               className="flex flex-wrap gap-2 mb-10"
             >
               <Chip delay={0.55} className="border-blue-500/30 bg-blue-500/10 text-blue-300">
-                <Code2 className="w-3 h-3" /> Laravel · PHP
+                Laravel · PHP
               </Chip>
               <Chip delay={0.60} className="border-accent-purple/30 bg-accent-purple/10 text-purple-300">
-                <Globe className="w-3 h-3" /> React · Vue
+                React · Vue
               </Chip>
               <Chip delay={0.65} className="border-amber-500/30 bg-amber-500/10 text-amber-300">
-                <Coffee className="w-3 h-3" /> Full-Stack
+                Full-Stack
               </Chip>
               <Chip delay={0.70} className="border-teal-500/30 bg-teal-500/10 text-teal-300">
-                <Code2 className="w-3 h-3" /> MySQL · IoT
+                MySQL · IoT
+              </Chip>
+              <Chip delay={0.75} className="border-sky-500/30 bg-sky-500/10 text-sky-300">
+                Flutter · Dart
+              </Chip>
+              <Chip delay={0.80} className="border-rose-500/30 bg-rose-500/10 text-rose-300">
+                Inertia.js
               </Chip>
             </motion.div>
 

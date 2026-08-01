@@ -84,9 +84,7 @@ const Header = () => {
       >
         <div className="container mx-auto px-6 h-20 flex justify-between items-center">
           <Link to="/" onClick={handleHomeClick} className="text-2xl font-bold text-white tracking-wider hover:text-accent-purple transition-colors">
-            <span className="text-accent-purple">&lt;</span>
             LLOYD RYAN REYES
-            <span className="text-accent-purple">/&gt;</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-8">
@@ -140,9 +138,7 @@ const Header = () => {
             <div className="container mx-auto px-6 h-full flex flex-col">
               <div className="flex justify-between items-center h-20">
                 <Link to="/" onClick={handleHomeClick} className="text-2xl font-bold text-white tracking-wider">
-                  <span className="text-accent-purple">&lt;</span>
                   LLOYD RYAN REYES
-                  <span className="text-accent-purple">/&gt;</span>
                 </Link>
                 <button onClick={() => setIsOpen(false)} className="text-white">
                   <X size={28} />

@@ -313,7 +313,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, type: 'spring' }}
-                className="absolute -right-4 top-10 md:-right-10 bg-white/5 backdrop-blur-xl border border-white/15 rounded-2xl px-4 py-3 shadow-xl"
+                className="hidden md:block absolute -right-4 top-10 md:-right-10 bg-white/5 backdrop-blur-xl border border-white/15 rounded-2xl px-4 py-3 shadow-xl"
               >
                 <p className="text-2xl font-black text-white">2+</p>
                 <p className="text-xs text-gray-400">Years Coding</p>
@@ -323,7 +323,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.0, type: 'spring' }}
-                className="absolute -left-4 bottom-16 md:-left-10 bg-white/5 backdrop-blur-xl border border-white/15 rounded-2xl px-4 py-3 shadow-xl"
+                className="hidden md:block absolute -left-4 bottom-16 md:-left-10 bg-white/5 backdrop-blur-xl border border-white/15 rounded-2xl px-4 py-3 shadow-xl"
               >
                 <p className="text-2xl font-black text-white">10+</p>
                 <p className="text-xs text-gray-400">Projects Built</p>
@@ -333,7 +333,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, type: 'spring' }}
-                className="absolute left-1/2 -translate-x-1/2 -bottom-6 bg-accent-purple/20 backdrop-blur-xl border border-accent-purple/40 rounded-full px-5 py-2 shadow-xl flex items-center gap-2"
+                className="hidden md:flex absolute left-1/2 -translate-x-1/2 -bottom-6 bg-accent-purple/20 backdrop-blur-xl border border-accent-purple/40 rounded-full px-5 py-2 shadow-xl items-center gap-2"
               >
                 <span className="w-2 h-2 bg-accent-purple rounded-full animate-pulse" />
                 <span className="text-xs text-purple-200 font-semibold whitespace-nowrap">Open to Opportunities</span>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/Hero';
 import Portfolio from '@/components/Portfolio';
-import AboutSection from '@/components/AboutSection';
+import AboutSection from '@/components/About';
 import ExpertiseSection from '@/components/ExpertiseSection';
 import SocialProof from '@/components/SocialProof';
 import CTA from '@/components/CTA';

@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Lloyd Ryan Reyes Portfolio - Innovative Tech Solutions</title>
+        <title>Reyes, L.R Portfolio</title>
         <meta
           name="description"
           content="Full-stack software engineer specializing in web development, AI/ML solutions, IoT systems, and modern tech architecture. Building innovative solutions for complex problems."

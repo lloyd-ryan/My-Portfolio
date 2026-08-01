@@ -7,21 +7,21 @@ import { assetUrl } from '@/lib/assets';
 const projects = [{
   id: 1,
   slug: 'social-media-app',
-  title: 'Next-Gen Banking UI',
-  description: 'A dark-themed social media application interface shown on a smartphone.',
-  imgKey: "dark mode social media app on phone"
+  title: 'BrewNiversity POS',
+  description: 'A point-of-sale platform created for BrewNiversity.',
+  imgKey: 'BrewNiversity POS'
 }, {
   id: 2,
   slug: 'fintech-dashboard',
-  title: 'Fintech Dashboard',
-  description: 'A fintech application dashboard with payment details, displayed on a smartphone next to a keyboard.',
-  imgKey: "fintech app on phone next to keyboard"
+  title: 'iStockCard',
+  description: 'A modern inventory and stock-card management solution.',
+  imgKey: 'iStockCard'
 }, {
   id: 3,
   slug: 'digital-marketing-agency-site',
-  title: 'Digital Marketing Agency Site',
-  description: 'A digital marketing agency website homepage, shown on a smartphone with a sleek, modern design.',
-  imgKey: "digital marketing agency website on phone"
+  title: 'CoffeeForLife NewsRoom',
+  description: 'A newsroom and publishing experience for CoffeeForLife.',
+  imgKey: 'CoffeeForLife NewsRoom'
 }];
 const Portfolio = () => {
   const navigate = useNavigate();
@@ -48,12 +48,12 @@ const Portfolio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleProjectClick('social-media-app')}>
-            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="RCIC content management system" src={assetUrl('rcic-cms.png')} />
+            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="BrewNiversity POS" src={assetUrl('BrewNiversity POS.png')} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
               <div className="flex justify-between items-end">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1">Next-Gen Banking UI</h3>
+                  <h3 className="text-xl font-bold text-white mb-1">BrewNiversity POS</h3>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-3 rounded-full">
                   <ArrowUpRight className="w-5 h-5 text-white" />
@@ -63,12 +63,12 @@ const Portfolio = () => {
           </div>
 
           <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleProjectClick('fintech-dashboard')}>
-            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="RCIC point-of-sale and CupScore system" src={assetUrl('rcic-pos-cupscore.png')} />
+            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="iStockCard" src={assetUrl('iStockCard.png')} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
               <div className="flex justify-between items-end">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1">Fintech Dashboard</h3>
+                  <h3 className="text-xl font-bold text-white mb-1">iStockCard</h3>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-3 rounded-full">
                   <ArrowUpRight className="w-5 h-5 text-white" />
@@ -78,12 +78,12 @@ const Portfolio = () => {
           </div>
 
           <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleProjectClick('digital-marketing-agency-site')}>
-            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="RCIC digital ecosystem" src={assetUrl('rcic-ecosystem.png')} />
+            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="CoffeeForLife NewsRoom" src={assetUrl('CoffeeForLife NewsRoom.png')} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
               <div className="flex justify-between items-end">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1">Digital Marketing Agency Site</h3>
+                  <h3 className="text-xl font-bold text-white mb-1">CoffeeForLife NewsRoom</h3>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-3 rounded-full">
                   <ArrowUpRight className="w-5 h-5 text-white" />

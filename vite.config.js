@@ -234,8 +234,9 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
-	// Use relative asset paths so the build works when uploaded to Hostinger
-	base: './',
+	// GitHub Pages serves this repository from /My-Portfolio/.
+	// Keep relative paths for other production hosts.
+	base: process.env.GITHUB_ACTIONS ? '/My-Portfolio/' : './',
 	customLogger: logger,
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), iframeRouteRestorationPlugin(), selectionModePlugin()] : []),

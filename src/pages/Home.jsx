@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/Hero';
-import ProjectsShowcase from '@/components/ProjectsShowcase';
+import Portfolio from '@/components/Portfolio';
 import AboutSection from '@/components/AboutSection';
 import ExpertiseSection from '@/components/ExpertiseSection';
 import SocialProof from '@/components/SocialProof';
@@ -21,7 +21,7 @@ const Home = () => {
       </Helmet>
 
       <Hero />
-      <SectionAnimator><ProjectsShowcase /></SectionAnimator>
+      <SectionAnimator><Portfolio /></SectionAnimator>
       <AboutSection />
       <SectionAnimator><ExpertiseSection /></SectionAnimator>
       <SectionAnimator><SocialProof /></SectionAnimator>

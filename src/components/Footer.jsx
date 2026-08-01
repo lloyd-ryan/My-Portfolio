@@ -10,8 +10,8 @@ const Footer = () => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
     
-    if (href === '/contact') {
-      navigate('/contact');
+    if (href === '/contact' || href === '/projects' || href === '/about') {
+      navigate(href);
     } else {
       const [path, id] = href.split('#');
       
@@ -34,8 +34,8 @@ const Footer = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/#' },
-    { name: 'Projects', href: '/#projects' },
-    { name: 'About', href: '/#about' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'About', href: '/about' },
     { name: 'Expertise', href: '/#expertise' },
     { name: 'Contact', href: '/contact' },
   ];

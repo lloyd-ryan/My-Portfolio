@@ -217,7 +217,7 @@ const Hero = () => {
               className="flex flex-wrap gap-4"
             >
               <Button
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/projects')}
                 size="lg"
                 className="bg-accent-purple hover:bg-accent-purple/90 text-white font-bold px-8 py-6 text-base rounded-full group shadow-lg shadow-accent-purple/30 transition-all duration-300 hover:shadow-accent-purple/50 hover:scale-105"
               >

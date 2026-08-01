@@ -37,8 +37,8 @@ const SocialProof = () => {
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: 50, suffix: '+' },
-    { label: 'Years Experience', value: 8, suffix: '+' },
+    { label: 'Projects Completed', value: 10, suffix: '+' },
+    { label: 'Years Experience', value: 2, suffix: '+' },
     { label: 'Satisfied Clients', value: 35, suffix: '+' },
     { label: 'Code Commits', value: 5000, suffix: '+' },
   ];

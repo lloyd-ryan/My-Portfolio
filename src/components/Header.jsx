@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X, Download, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate, Link } from 'react-router-dom';
 import { assetUrl } from '@/lib/assets';
@@ -13,8 +13,8 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Home', href: '/#' },
-    { name: 'Projects', href: '/#projects' },
-    { name: 'About', href: '/#about' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'About', href: '/about' },
     { name: 'Expertise', href: '/#expertise' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -38,8 +38,8 @@ const Header = () => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
     
-    if (href === '/contact') {
-      navigate('/contact');
+    if (href === '/contact' || href === '/projects' || href === '/about') {
+      navigate(href);
     } else {
       const [path, id] = href.split('#');
       
@@ -104,6 +104,12 @@ const Header = () => {
           </nav>
           
           <div className="hidden md:flex items-center gap-4">
+            <Button asChild variant="outline" className="border-white/15 bg-white/5 text-gray-200 hover:bg-white/10 hover:text-white rounded-full font-semibold">
+              <a href={assetUrl('REYES - PORTFOLIO.pdf')} target="_blank" rel="noreferrer">
+                <FileText className="mr-2 h-4 w-4" />
+                Detailed Portfolio
+              </a>
+            </Button>
             <Button asChild
               className="bg-accent-purple/20 text-accent-purple hover:bg-accent-purple hover:text-white border-2 border-accent-purple rounded-full font-semibold group transition-all duration-300"
             >
@@ -160,6 +166,12 @@ const Header = () => {
               </nav>
               
               <div className="py-8 flex flex-col gap-4">
+                <Button asChild variant="outline" className="border-white/15 text-white w-full text-lg py-6 rounded-full">
+                  <a href={assetUrl('REYES - PORTFOLIO.pdf')} target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}>
+                    <FileText className="mr-2 h-5 w-5" />
+                    Detailed Portfolio
+                  </a>
+                </Button>
                 <Button asChild
                   className="bg-accent-purple text-white hover:bg-accent-purple/90 w-full text-lg py-6 rounded-full group"
                 >

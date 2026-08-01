@@ -5,6 +5,8 @@ import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Contact from '@/pages/Contact';
 import RCICProject from '@/pages/RCICProject';
+import ProjectsPage from '@/pages/ProjectsPage';
+import AboutPage from '@/pages/AboutPage';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="projects/rcic-ecosystem" element={<RCICProject />} />
         </Route>
       </Routes>

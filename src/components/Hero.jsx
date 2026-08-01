@@ -239,14 +239,16 @@ const Hero = () => {
               <span className="text-xs text-gray-600 uppercase tracking-widest">Connect</span>
               <div className="flex-1 h-px bg-white/10" />
               {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Mail, href: '/contact', label: 'Email' },
+                { icon: Github, href: 'https://github.com/lloyd-ryan', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/lloyd-ryan-reyes-32456b29a/', label: 'LinkedIn' },
+                { icon: Mail, href: 'mailto:lloydryanreyes@gmail.com', label: 'Email' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noreferrer' : undefined}
                   className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-gray-400 hover:text-accent-purple hover:border-accent-purple/50 hover:bg-accent-purple/10 transition-all duration-300 hover:scale-110"
                 >
                   <Icon className="w-4 h-4" />

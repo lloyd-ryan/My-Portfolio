@@ -1,18 +1,10 @@
 
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast";
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const navigate = useNavigate();
-
-  const handleSocialClick = () => {
-    toast({
-      title: "Feature Not Implemented 🚧",
-      description: "This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
-    });
-  };
 
   const handleNavClick = (e) => {
     e.preventDefault();
@@ -49,19 +41,18 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github size={20} />, name: 'GitHub', url: 'https://github.com/lloydryanreyes' },
-    { icon: <Linkedin size={20} />, name: 'LinkedIn', url: 'https://linkedin.com/in/lloydryanreyes' },
-    { icon: <Twitter size={20} />, name: 'Twitter', url: 'https://twitter.com/lloydryanreyes' },
+    { icon: <Github size={20} />, name: 'GitHub', url: 'https://github.com/lloyd-ryan' },
+    { icon: <Linkedin size={20} />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/lloyd-ryan-reyes-32456b29a/' },
+    { icon: <span className="text-xl font-bold leading-none">f</span>, name: 'Facebook', url: 'https://www.facebook.com/lloydryan.reyes.28/' },
   ];
 
   const contactInfo = [
-    { icon: <Mail size={16} />, text: 'lloydryanreyes@email.com' },
-    { icon: <Phone size={16} />, text: '+1 (555) 123-4567' },
-    { icon: <MapPin size={16} />, text: 'San Francisco, CA' },
+    { icon: <Mail size={16} />, text: 'lloydryanreyes@gmail.com', href: 'mailto:lloydryanreyes@gmail.com' },
+    { icon: <MapPin size={16} />, text: 'Philippines' },
   ];
 
   return (
-    <footer className="bg-[#0C0D0D] border-t border-white/10 pt-16 pb-8">
+    <footer className="bg-[#090A0A] border-t border-white/10 pt-14 pb-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
@@ -76,14 +67,16 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <button
+                <a
                   key={social.name}
-                  onClick={handleSocialClick}
+                  href={social.url}
+                  target="_blank"
+                  rel="noreferrer"
                   className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-accent-purple hover:border-accent-purple/50 hover:bg-accent-purple/10 transition-all duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -126,7 +119,11 @@ const Footer = () => {
               {contactInfo.map((info, index) => (
                 <li key={index} className="flex items-center gap-3 text-gray-400">
                   <div className="text-accent-purple">{info.icon}</div>
-                  <span className="text-sm">{info.text}</span>
+                  {info.href ? (
+                    <a href={info.href} className="text-sm hover:text-white transition-colors">{info.text}</a>
+                  ) : (
+                    <span className="text-sm">{info.text}</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -139,14 +136,9 @@ const Footer = () => {
             <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} LLOYD RYAN REYES. All Rights Reserved.
             </p>
-            <div className="flex gap-6 text-sm">
-              <button onClick={handleSocialClick} className="text-gray-500 hover:text-accent-purple transition-colors">
-                Privacy Policy
-              </button>
-              <button onClick={handleSocialClick} className="text-gray-500 hover:text-accent-purple transition-colors">
-                Terms of Service
-              </button>
-            </div>
+            <a href="mailto:lloydryanreyes@gmail.com" className="text-gray-500 hover:text-accent-purple transition-colors text-sm">
+              lloydryanreyes@gmail.com
+            </a>
           </div>
         </div>
       </div>

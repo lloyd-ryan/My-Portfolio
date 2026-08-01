@@ -1,9 +1,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
-import { Star, Quote, Github, Linkedin, Twitter } from 'lucide-react';
+import { Star, Quote, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/use-toast';
 
 const SocialProof = () => {
   const testimonials = [
@@ -41,17 +40,10 @@ const SocialProof = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, name: 'GitHub', url: '#' },
-    { icon: <Linkedin className="w-5 h-5" />, name: 'LinkedIn', url: '#' },
-    { icon: <Twitter className="w-5 h-5" />, name: 'Twitter', url: '#' },
+    { icon: <Github className="w-5 h-5" />, name: 'GitHub', url: 'https://github.com/lloyd-ryan' },
+    { icon: <Linkedin className="w-5 h-5" />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/lloyd-ryan-reyes-32456b29a/' },
+    { icon: <span className="text-xl font-bold leading-none">f</span>, name: 'Facebook', url: 'https://www.facebook.com/lloydryan.reyes.28/' },
   ];
-
-  const handleSocialClick = () => {
-    toast({
-      title: "Feature Not Implemented 🚧",
-      description: "This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
-    });
-  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#0C0D0D] via-[#111213] to-[#0C0D0D]">
@@ -135,15 +127,16 @@ const SocialProof = () => {
           <p className="text-gray-400 mb-6">Connect with me on social media</p>
           <div className="flex justify-center gap-4">
             {socialLinks.map((social) => (
-              <Button
+              <Button asChild
                 key={social.name}
-                onClick={handleSocialClick}
                 variant="outline"
                 size="lg"
                 className="border-2 border-accent-purple/30 hover:bg-accent-purple/10 text-white rounded-full"
               >
-                {social.icon}
-                <span className="ml-2">{social.name}</span>
+                <a href={social.url} target="_blank" rel="noreferrer">
+                  {social.icon}
+                  <span className="ml-2">{social.name}</span>
+                </a>
               </Button>
             ))}
           </div>

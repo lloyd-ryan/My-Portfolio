@@ -75,9 +75,9 @@ const Contact = () => {
               duration: 0.5,
               delay: 1
             }}>
-                  <a href="#" className="text-lg text-gray-300 hover:text-accent-purple transition-colors duration-300">LinkedIn</a>
-                  <a href="#" className="text-lg text-gray-300 hover:text-accent-purple transition-colors duration-300">Dribbble</a>
-                  <a href="#" className="text-lg text-gray-300 hover:text-accent-purple transition-colors duration-300">Behance</a>
+                  <a href="https://www.linkedin.com/in/lloyd-ryan-reyes-32456b29a/" target="_blank" rel="noreferrer" className="text-lg text-gray-300 hover:text-accent-purple transition-colors duration-300">LinkedIn</a>
+                  <a href="https://github.com/lloyd-ryan" target="_blank" rel="noreferrer" className="text-lg text-gray-300 hover:text-accent-purple transition-colors duration-300">GitHub</a>
+                  <a href="https://www.facebook.com/lloydryan.reyes.28/" target="_blank" rel="noreferrer" className="text-lg text-gray-300 hover:text-accent-purple transition-colors duration-300">Facebook</a>
               </motion.div>
             </motion.div>
 
@@ -85,11 +85,11 @@ const Contact = () => {
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                 <div>
-                  <ContactInfoBlock title="Project Inquiries" lines={["lloydryanreyes@email.com", "+1 (555) 123-4567"]} delay={0.4} />
-                  <ContactInfoBlock title="Partnerships" lines={["partners@lloydryanreyes.com", "+1 (555) 987-6543"]} delay={0.6} />
+                  <ContactInfoBlock title="Project Inquiries" lines={["lloydryanreyes@gmail.com"]} delay={0.4} />
+                  <ContactInfoBlock title="Social" lines={["LinkedIn · GitHub · Facebook"]} delay={0.6} />
                 </div>
                 <div>
-                  <ContactInfoBlock title="My Studio" lines={["100 Innovation Drive,", "Suite 200, Tech City, TX 78701"]} delay={0.5} />
+                  <ContactInfoBlock title="Location" lines={["Philippines"]} delay={0.5} />
                 </div>
               </div>
 

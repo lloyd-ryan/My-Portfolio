@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate, Link } from 'react-router-dom';
-import { toast } from '@/components/ui/use-toast';
+import { assetUrl } from '@/lib/assets';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,13 +73,6 @@ const Header = () => {
     }
   };
 
-  const handleDownloadResume = () => {
-    toast({
-      title: "Feature Not Implemented 🚧",
-      description: "This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
-    });
-  };
-
   return (
     <>
       <motion.header
@@ -111,12 +104,13 @@ const Header = () => {
           </nav>
           
           <div className="hidden md:flex items-center gap-4">
-            <Button 
-              onClick={handleDownloadResume}
+            <Button asChild
               className="bg-accent-purple/20 text-accent-purple hover:bg-accent-purple hover:text-white border-2 border-accent-purple rounded-full font-semibold group transition-all duration-300"
             >
-              <Download className="mr-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-y-0.5" />
-              Download Resume
+              <a href={assetUrl('REYES - RESUME.pdf')} download>
+                <Download className="mr-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-y-0.5" />
+                Download Resume
+              </a>
             </Button>
           </div>
           
@@ -166,12 +160,13 @@ const Header = () => {
               </nav>
               
               <div className="py-8 flex flex-col gap-4">
-                <Button 
-                  onClick={handleDownloadResume}
+                <Button asChild
                   className="bg-accent-purple text-white hover:bg-accent-purple/90 w-full text-lg py-6 rounded-full group"
                 >
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Resume
+                  <a href={assetUrl('REYES - RESUME.pdf')} download onClick={() => setIsOpen(false)}>
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Resume
+                  </a>
                 </Button>
               </div>
             </div>

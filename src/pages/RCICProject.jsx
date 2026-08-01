@@ -9,6 +9,7 @@ import {
   X, ZoomIn, Code2, Database, Layers
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { assetUrl } from '@/lib/assets';
 
 /* ──────────────────────── data ──────────────────────── */
 const BRAND = '#C8860A';
@@ -26,8 +27,8 @@ const subsystems = [
     border: 'rgba(200,134,10,0.25)',
     description: 'A fully-featured editorial suite powering every page of the RCIC platform. Manages news articles, events, training schedules, research publications, and media assets — all through a role-based admin dashboard.',
     tech: ['Laravel', 'Blade', 'MySQL', 'TinyMCE', 'FilePond'],
-    image: '/rcic-cms.png',
-    screen: '/news.png',
+    image: assetUrl('rcic-cms.png'),
+    screen: assetUrl('news.png'),
   },
   {
     key: 'pos',
@@ -39,8 +40,8 @@ const subsystems = [
     border: 'rgba(124,92,62,0.25)',
     description: 'A touch-friendly POS system built for the RCIC Coffee Museum café and training lab. Handles product catalog, order-taking, receipts, and end-of-day sales reports — fully offline-capable.',
     tech: ['Laravel', 'Alpine.js', 'SQLite', 'Thermal Print API'],
-    image: '/rcic-pos-cupscore.png',
-    screen: '/rcic website home page.png',
+    image: assetUrl('rcic-pos-cupscore.png'),
+    screen: assetUrl('rcic website home page.png'),
   },
   {
     key: 'conexus',
@@ -52,8 +53,8 @@ const subsystems = [
     border: 'rgba(46,125,50,0.25)',
     description: 'A searchable directory of Subject Matter Experts (SMEs) supporting RCIC programs. Includes profiles, expertise tags, affiliation info, and a booking/inquiry flow for partnerships and consultations.',
     tech: ['Laravel', 'Vue.js', 'MySQL', 'Algolia'],
-    image: '/pool of experts.png',
-    screen: '/pool of experts.png',
+    image: assetUrl('pool of experts.png'),
+    screen: assetUrl('pool of experts.png'),
   },
   {
     key: 'cupscore',
@@ -65,19 +66,19 @@ const subsystems = [
     border: 'rgba(139,58,15,0.25)',
     description: 'A digital Q-grading / cupping platform that digitises the SCA cupping protocol. Cuppers score fragrance, aroma, body, acidity, and aftertaste — the system aggregates results into certified PDF reports.',
     tech: ['Laravel', 'React', 'Chart.js', 'PDF Generation'],
-    image: '/rcic-ecosystem.png',
-    screen: '/research intelligence.png',
+    image: assetUrl('rcic-ecosystem.png'),
+    screen: assetUrl('research intelligence.png'),
   },
 ];
 
 const screenshots = [
-  { src: '/rcic website home page.png',  label: 'Homepage — Brewing Excellence Through Innovation' },
-  { src: '/about rcic.png',              label: 'About RCIC — Empowering the Philippine Coffee Industry' },
-  { src: '/news.png',                    label: 'Newsroom — News & Articles' },
-  { src: '/pool of experts.png',         label: 'CONEXUS — Subject Matter Experts Directory' },
-  { src: '/research intelligence.png',   label: 'Research Intelligence — 316M+ Global Studies' },
-  { src: '/museum.png',                  label: 'Coffee Museum — Philippine Heritage Trail' },
-  { src: '/brewniversity.png',           label: 'BrewNiversity — Barista Training & Certification' },
+  { src: assetUrl('rcic website home page.png'), label: 'Homepage — Brewing Excellence Through Innovation' },
+  { src: assetUrl('about rcic.png'), label: 'About RCIC — Empowering the Philippine Coffee Industry' },
+  { src: assetUrl('news.png'), label: 'Newsroom — News & Articles' },
+  { src: assetUrl('pool of experts.png'), label: 'CONEXUS — Subject Matter Experts Directory' },
+  { src: assetUrl('research intelligence.png'), label: 'Research Intelligence — 316M+ Global Studies' },
+  { src: assetUrl('museum.png'), label: 'Coffee Museum — Philippine Heritage Trail' },
+  { src: assetUrl('brewniversity.png'), label: 'BrewNiversity — Barista Training & Certification' },
 ];
 
 const stats = [
@@ -159,7 +160,7 @@ const RCICProject = () => {
           className="absolute inset-0 origin-center"
         >
           <img
-            src="/rcic website home page.png"
+            src={assetUrl('rcic website home page.png')}
             alt="RCIC Website"
             className="w-full h-full object-cover object-top"
           />
@@ -318,7 +319,7 @@ const RCICProject = () => {
             >
               <div className="rounded-2xl overflow-hidden border border-white/8 shadow-2xl">
                 <ParallaxSection offset={30}>
-                  <img src="/about rcic.png" alt="About RCIC — Empowering Philippine Coffee" className="w-full object-cover" />
+                  <img src={assetUrl('about rcic.png')} alt="About RCIC — Empowering Philippine Coffee" className="w-full object-cover" />
                 </ParallaxSection>
               </div>
               {/* Accent corner */}
@@ -511,10 +512,10 @@ const RCICProject = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { img: '/research intelligence.png', icon: FlaskConical, title: 'Research Intelligence', desc: '316M+ global studies · 117M+ researchers · live scholarly data engine' },
-              { img: '/brewniversity.png',          icon: BookOpen,      title: 'BrewNiversity',        desc: 'Online training courses and certification management for baristas' },
-              { img: '/museum.png',                 icon: Globe,         title: 'Coffee Museum',        desc: 'Digital exhibits and interactive heritage trail of Philippine coffee' },
-              { img: '/news.png',                   icon: Newspaper,     title: 'Newsroom',             desc: 'Articles, events, training announcements — all section-filtered' },
+              { img: assetUrl('research intelligence.png'), icon: FlaskConical, title: 'Research Intelligence', desc: '316M+ global studies · 117M+ researchers · live scholarly data engine' },
+              { img: assetUrl('brewniversity.png'), icon: BookOpen, title: 'BrewNiversity', desc: 'Online training courses and certification management for baristas' },
+              { img: assetUrl('museum.png'), icon: Globe, title: 'Coffee Museum', desc: 'Digital exhibits and interactive heritage trail of Philippine coffee' },
+              { img: assetUrl('news.png'), icon: Newspaper, title: 'Newsroom', desc: 'Articles, events, training announcements — all section-filtered' },
             ].map((item, i) => (
               <motion.div
                 key={i}

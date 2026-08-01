@@ -7,6 +7,7 @@ import Stats from '@/components/Stats';
 import SectionAnimator from '@/components/SectionAnimator';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { assetUrl } from '@/lib/assets';
 
 // Mock data for projects
 const projectData = {
@@ -211,7 +212,7 @@ const Project = () => {
         <SectionAnimator>
             <div className="container mx-auto px-6 mb-16">
                  <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-accent-purple/10">
-                    <img className="w-full h-full object-cover" alt={project.images.hero.alt} src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/gemini_generated_image_n6u5epn6u5epn6u5-5ABrF.png" />
+                    <img className="w-full h-full object-cover" alt={project.images.hero.alt} src={assetUrl('rcic-ecosystem.png')} />
                  </div>
             </div>
         </SectionAnimator>
@@ -223,10 +224,10 @@ const Project = () => {
                     {/* Two images */}
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="aspect-square rounded-2xl overflow-hidden">
-                           <img className="w-full h-full object-cover" alt={project.images.gallery[1].alt} src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/gemini_generated_image_mxgp1bmxgp1bmxgp-IDwMQ.png" />
+                           <img className="w-full h-full object-cover" alt={project.images.gallery[1].alt} src={assetUrl('rcic-cms.png')} />
                         </div>
                         <div className="aspect-square rounded-2xl overflow-hidden">
-                            <img className="w-full h-full object-cover" alt={project.images.gallery[2].alt} src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/gemini_generated_image_mxgp1bmxgp1bmxgp-1-RqwfI.png" />
+                            <img className="w-full h-full object-cover" alt={project.images.gallery[2].alt} src={assetUrl('rcic-pos-cupscore.png')} />
                         </div>
                     </div>
                 </div>
@@ -253,7 +254,7 @@ const Project = () => {
         <SectionAnimator>
             <div className="container mx-auto px-6 mb-16">
                 <div className="aspect-video rounded-2xl overflow-hidden">
-                    <img className="w-full h-full object-cover" alt={project.images.gallery2[0].alt} src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/professional-exchange-BmQpX.png" />
+                    <img className="w-full h-full object-cover" alt={project.images.gallery2[0].alt} src={assetUrl('research intelligence.png')} />
                 </div>
             </div>
         </SectionAnimator>

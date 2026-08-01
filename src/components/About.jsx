@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { assetUrl } from '@/lib/assets';
 const About = () => {
   return <section id="about" className="py-24 bg-[#0C0D0D] overflow-hidden">
       <div className="container mx-auto px-6">
@@ -19,7 +20,7 @@ const About = () => {
           ease: 'easeOut'
         }}>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img className="w-full h-full object-cover" alt="Modern office with creative team working on computers" src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/charlesdeluvio-lks7vei-eag-unsplash-7Or6F.jpg" />
+              <img className="w-full h-full object-cover" alt="RCIC website homepage" src={assetUrl('rcic website home page.png')} />
             </div>
           </motion.div>
 
@@ -68,7 +69,7 @@ const About = () => {
           ease: 'easeOut'
         }} className="lg:order-last">
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img className="w-full h-full object-cover" alt="Diverse team collaborating around a table with laptops and notes" src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/michael-t-rxri-ho62y4-unsplash-2-tvxRc.jpg" />
+              <img className="w-full h-full object-cover" alt="RCIC expert network" src={assetUrl('pool of experts.png')} />
             </div>
           </motion.div>
 

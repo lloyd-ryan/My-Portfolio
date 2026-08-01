@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
+import { assetUrl } from '@/lib/assets';
 const pageVariants = {
   initial: {
     opacity: 0,
@@ -102,7 +103,7 @@ const Contact = () => {
               duration: 0.8,
               delay: 0.8
             }}>
-                <img className="w-full h-auto object-cover" alt="Modern office space with creative design elements" src="https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/modern-office-concentration-RCQmi.png" />
+                <img className="w-full h-auto object-cover" alt="About the RCIC platform" src={assetUrl('about rcic.png')} />
               </motion.div>
             </div>
           </div>

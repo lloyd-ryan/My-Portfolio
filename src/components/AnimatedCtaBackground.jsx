@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { assetUrl } from '@/lib/assets';
 
-const imageUrl = 'https://horizons-cdn.hostinger.com/17942bd5-75e7-4e2c-a8f9-d01096eac703/71f6723b117af5fb7e36d829dfcd6b7f.jpg';
+const imageUrl = assetUrl('rcic-hero.png');
 
 const layers = [
   {

@@ -4,6 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, Mail, Download, Github, Linkedin, Coffee, Code2, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import { assetUrl } from '@/lib/assets';
 
 /* ── Typewriter ── */
 const roles = [
@@ -291,7 +292,7 @@ const Hero = () => {
                 className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl shadow-accent-purple/20 cursor-none group"
               >
                 <img
-                  src="/barong.jpg"
+                  src={assetUrl('barong.jpg')}
                   alt="Lloyd Ryan Reyes in Barong Tagalog"
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />

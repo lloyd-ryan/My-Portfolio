@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { assetUrl } from '@/lib/assets';
 const pageVariants = {
   initial: {
     opacity: 0,
@@ -93,7 +92,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <motion.div className="overflow-hidden rounded-2xl shadow-2xl shadow-accent-purple/10" initial={{
+              <motion.div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111213] shadow-2xl shadow-black/30" initial={{
               opacity: 0,
               y: 30
             }} animate={{
@@ -103,7 +102,28 @@ const Contact = () => {
               duration: 0.8,
               delay: 0.8
             }}>
-                <img className="w-full h-auto object-cover" alt="About the RCIC platform" src={assetUrl('about rcic.png')} />
+                <iframe
+                  title="Lloyd Ryan Reyes location on Google Maps"
+                  src="https://www.google.com/maps?q=6.510870,125.247008&z=15&output=embed"
+                  className="w-full h-[340px] md:h-[400px] border-0 grayscale-[20%] contrast-[95%]"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div className="flex items-center justify-between gap-4 px-5 py-4 border-t border-white/10">
+                  <div>
+                    <p className="text-sm font-semibold text-white">My location</p>
+                    <p className="text-xs text-gray-500">View the exact location on Google Maps</p>
+                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/gybqHoQEsZ71TvREA"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="shrink-0 text-sm font-semibold text-accent-purple hover:text-white transition-colors"
+                  >
+                    Open map ↗
+                  </a>
+                </div>
               </motion.div>
             </div>
           </div>

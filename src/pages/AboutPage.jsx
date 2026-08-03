@@ -5,7 +5,7 @@ import { Code2, Database, Smartphone, Award, Briefcase, GraduationCap } from 'lu
 
 const highlights = [
   { icon: Code2, title: '6+ software systems', text: 'Web and mobile solutions developed for government and academic institutions.' },
-  { icon: Award, title: '4 registered copyrights', text: 'Original software work protected through Philippine copyright registration.' },
+  { icon: Award, title: '6 registered copyrights', text: 'Original software work protected through Philippine copyright registration.' },
   { icon: Briefcase, title: 'Applied experience', text: 'Student Assistant experience with the Davao del Sur Provincial Capitol and Regional Coffee Innovation Center.' },
   { icon: GraduationCap, title: 'BS Information Technology', text: 'Graduate of Davao del Sur State College, class of 2025–2026.' },
 ];

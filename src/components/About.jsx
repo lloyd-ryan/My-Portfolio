@@ -18,6 +18,21 @@ const certificates = [
     file: 'ConeXus OMS.png',
     description: 'Copyright certificate for the ConeXus operations management system.',
   },
+  {
+    title: 'CupScore: Coffee Quality Evaluation System',
+    file: 'CupScore - Coffee Quality Evaluation System.png',
+    description: 'Copyright certificate for the CupScore coffee quality evaluation and scoring system.',
+  },
+  {
+    title: 'ConeXus Mobile App',
+    file: 'ConeXus Mobile App.png',
+    description: 'Copyright certificate for the ConeXus mobile application supporting coffee farmers in the field.',
+  },
+  {
+    title: 'Coffee Green Grading System',
+    file: 'Coffee Green Grading System.png',
+    description: 'Copyright certificate for the system used to evaluate and grade green coffee beans.',
+  },
 ];
 
 const About = () => (
